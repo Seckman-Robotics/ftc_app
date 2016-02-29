@@ -103,9 +103,18 @@ public class PushBotManual extends PushBotTelemetry
         {
             m_hand_position (a_hand_position () + 0.05);
         }
-        else if (gamepad2.b)
+        else if (gamepad2.y)
         {
             m_hand_position (a_hand_position () - 0.05);
+        }
+
+        if (gamepad2.a)
+        {
+            boost_Value = boost_Value+.5;
+        }
+        else if (gamepad2.b)
+        {
+            boost_Value = 0.5;
         }
 
         //

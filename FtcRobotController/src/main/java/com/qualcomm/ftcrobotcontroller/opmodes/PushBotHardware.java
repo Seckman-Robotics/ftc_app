@@ -369,11 +369,11 @@ public class PushBotHardware extends OpMode
     {
         if (v_motor_left_drive != null)
         {
-            v_motor_left_drive.setPower (p_left_power);
+            v_motor_left_drive.setPower (p_left_power * boost_Value);
         }
         if (v_motor_right_drive != null)
         {
-            v_motor_right_drive.setPower (p_right_power);
+            v_motor_right_drive.setPower (p_right_power * boost_Value);
         }
 
     } // set_drive_power
@@ -893,6 +893,9 @@ public class PushBotHardware extends OpMode
     /**
      * Access the left arm motor's power level.
      */
+    void m_left_arm_power (double p_level, boolean turbo){
+        //Has tu
+    }
     void m_left_arm_power (double p_level)
     {
         if (v_motor_left_arm != null)
@@ -1042,5 +1045,7 @@ public class PushBotHardware extends OpMode
      * Manage the aspects of the right hand servo.
      */
     private Servo v_servo_right_hand;
+
+    public double boost_Value = .5;
 
 } // PushBotHardware

@@ -122,6 +122,8 @@ public class PushBotTelemetry extends PushBotHardware
         telemetry.addData ("09", "GP2 Y: " + gamepad2.y);
         telemetry.addData ("10", "GP1 LT: " + gamepad1.left_trigger);
         telemetry.addData ("11", "GP1 RT: " + gamepad1.right_trigger);
+        telemetry.addData ("12", "GP2 A: " + gamepad2.a);
+        telemetry.addData ("13", "GP2 B: " + gamepad2.b);
 
     } // update_gamepad_telemetry
 
